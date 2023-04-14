@@ -10,10 +10,13 @@
 
 from pymongo import MongoClient
 
-db_client = MongoClient()
+# Base de datos local
+#db_client = MongoClient().local
 
-
-
+# Base de datos Remota
+# el ultimo .test es como quiero que se llame, puede tener cualquier nombre
+db_client = MongoClient(
+    "mongodb+srv://test:test@cluster1.cbqbk0w.mongodb.net/?retryWrites=true&w=majority").test
 
 
 
